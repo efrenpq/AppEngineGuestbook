@@ -1,6 +1,8 @@
 deploy:
   provider: gae
   language: python
+  python:
+    - 2.7
   keyfile: client-secret.json
   project: guestbook3-184807
   no_promote: true

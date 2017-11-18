@@ -1,5 +1,5 @@
 deploy:
-	provider: gae
-	keyfile: client-secret.json
-	project: guestbook3-184807
-	no_promote: true
+  provider: gae
+  keyfile: client-secret.json
+  project: guestbook3-184807
+  no_promote: true

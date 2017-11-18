@@ -3,3 +3,5 @@ deploy:
   keyfile: client-secret.json
   project: guestbook3-184807
   no_promote: true
+  skip_cleanup: true
+  default: true

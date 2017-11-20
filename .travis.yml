@@ -15,7 +15,7 @@ before_install:
     && printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh && cd $TRAVIS_BUILD_DIR;
     fi
   - gcloud -q components update
-  - gcloud -q auth activate-service-account --key-file $TRAVIS_BUILD_DIR/client_secret.json
+  - gcloud -q auth activate-service-account --key-file $TRAVIS_BUILD_DIR/client-secret.json
   - gcloud config set project guestbook3-184807 
 
 install:

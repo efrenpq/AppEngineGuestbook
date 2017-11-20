@@ -24,3 +24,4 @@ script:
   - gcloud app deploy app.yaml index.yaml
 after_success:
   - gcloud app deploy app.yaml index.yaml
+  - echo "HOla"

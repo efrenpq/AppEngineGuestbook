@@ -17,11 +17,6 @@ before_install:
   - gcloud config set project guestbook3-184807
 
 install:
-  - pip install -t lib -r requirements.txt
-  - pip install virtualenvwrapper
-  - source virtualenvwrapper.sh
-  - add2virtualenv ./lib
-  - pip install coveralls
 
 before_script:
 

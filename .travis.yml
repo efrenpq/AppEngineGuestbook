@@ -21,6 +21,4 @@ install:
 before_script:
 
 script:
-
-after_success:
   - gcloud -q preview app deploy app.yaml --version=1

@@ -7,7 +7,7 @@ cache:
   - "$HOME/gcloud/"
 env:
   global:
-  - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client_secrets.json
+  - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client-secret.json
 before_install:
 - openssl aes-256-cbc -K $encrypted_a2dae43ac7cf_key -iv $encrypted_a2dae43ac7cf_iv
   -in client-secret.json.enc -out client-secret.json -d
@@ -16,7 +16,7 @@ before_install:
   && printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh && cd $TRAVIS_BUILD_DIR;
   fi
 - gcloud -q components update
-- gcloud -q auth activate-service-account --key-file $TRAVIS_BUILD_DIR/client-secret.json
+- gcloud -q auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
 - gcloud config set project guestbook3-184807
 install:
 - echo "Instalando"
